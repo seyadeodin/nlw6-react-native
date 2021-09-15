@@ -3,7 +3,6 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
-    
     width: 'auto',
     height: 56,
     backgroundColor: theme.colors.primary,
@@ -25,5 +24,7 @@ export const styles = StyleSheet.create({
     borderRightWidth: 1,
     borderColor: theme.colors.line,
   },
-  
+  icon: {
+
+  } 
 })
