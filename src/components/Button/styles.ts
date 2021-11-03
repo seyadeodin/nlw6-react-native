@@ -9,23 +9,12 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     flexDirection: 'row',
     alignItems: 'center',
-    fontFamily: theme.fonts.text500,
   },
   title: {
     flex: 1,
     color: theme.colors.heading,
     fontSize: 15,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: theme.fonts.text500,
   },
-  iconWrapper: {
-    width: 56,
-    height: 56,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRightWidth: 1,
-    borderColor: theme.colors.line,
-  },
-  icon: {
-
-  } 
 })
