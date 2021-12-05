@@ -17,8 +17,10 @@ import { theme } from '../../global/styles/theme';
 import {styles} from './styles'
 import { ListHeader } from '../../components/ListHeader';
 import { ButtonIcon } from '../../components/ButtonIcon';
+import { useNavigation } from '@react-navigation/native';
 
 export function AppointmentDetails(){
+  const navigation = useNavigation();
   const members = [
     {
       id: '1',
