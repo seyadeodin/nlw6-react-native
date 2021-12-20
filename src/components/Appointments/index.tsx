@@ -12,27 +12,31 @@ import { GuildProps } from '../Guild';
 import { categories } from '../../utils/categories'; 
 import { styles } from './styles';
 
-type AppointmentProps = {
+export type AppointmentProps = {
   id: string;
   guild: GuildProps;
   category: string;
   date: string;
   description: string;
 }
-
-export type Props = RectButtonProps & {
+type Props = RectButtonProps & {
   data: AppointmentProps;
 }
 
 export function Appointment({ data, ...rest }: Props) {
   const [category] = categories.filter(item => item.id === data.category);
+  //the [] allow us to dearray it
+
   const { owner } = data.guild;
   const {primary, on} = theme.colors;
   
   return (
     <RectButton {...rest}>
       <View style={styles.container}>
-        <GuildIcon/>
+        <GuildIcon
+          guildId={data.guild.id}
+          iconId={data.guild.icon}
+        />
 
         <View style={styles.content}>
           <View style={styles.header}>
@@ -41,7 +45,7 @@ export function Appointment({ data, ...rest }: Props) {
             </Text>
 
             <Text style={styles.category}>
-              { category.title }
+              {category?.title}
             </Text>
           </View>
 
